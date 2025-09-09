@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('content/', include('content.urls')),
-    path('gameplay/', include('gameplay.urls')),
-    path('analytics/', include('analytics.urls')),
-    path('classroom/', include('classroom.urls')),
+    path("admin/", admin.site.urls),
+    path("", TemplateView.as_view(template_name="index.html"), name="home"),
+    path("accounts/", include("accounts.urls")),
+    path("content/", include("content.urls")),
+    path("gameplay/", include("gameplay.urls")),
+    path("analytics/", include("analytics.urls")),
+    path("classroom/", include("classroom.urls")),
 ]
-
