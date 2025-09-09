@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quizzes</h2>
+<ul>
+  {% for q in quizzes %}
+    <li>{{ q.question }} - (Answer: {{ q.answer }})</li>
+  {% endfor %}
+</ul>
+<script src="/static/js/quiz.js"></script>
+{% endblock %}
