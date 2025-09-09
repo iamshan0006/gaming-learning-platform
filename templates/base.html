@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SchoolPlay</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/accounts/signup/">Signup</a> |
+        <a href="/accounts/login/">Login</a> |
+        <a href="/content/quizzes/">Quizzes</a> |
+        <a href="/analytics/dashboard/">Dashboard</a> |
+        <a href="/accounts/logout/">Logout</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
