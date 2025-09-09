@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>My Quiz Attempts</h2>
+<ul>
+  {% for a in attempts %}
+    <li>{{ a.quiz.question|slice:":30" }}... → Score: {{ a.score }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
