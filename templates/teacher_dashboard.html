@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Teacher Dashboard</h2>
+<table border="1">
+    <tr><th>Student</th><th>Quiz</th><th>Score</th><th>Date</th></tr>
+    {% for a in attempts %}
+    <tr>
+        <td>{{ a.student.username }}</td>
+        <td>{{ a.quiz.question|slice:":30" }}...</td>
+        <td>{{ a.score }}</td>
+        <td>{{ a.timestamp }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
